@@ -93,6 +93,11 @@ public class TerrainManager : MonoBehaviour
 
   public void Generate()
   {
+    foreach (Transform obj in transform)
+    {
+      Destroy(obj.gameObject);
+    }
+
     _groundTilemap.ClearAllTiles();
     _barrierTilemap.ClearAllTiles();
     _decorTilemap.ClearAllTiles();
@@ -164,6 +169,9 @@ public class TerrainManager : MonoBehaviour
       if (noise < resource.Threshold) continue;
 
       Vector2 pos = new Vector2(x + 0.5f, y + 0.5f);
+      Vector3Int posInt = (Vector3Int)Vector2Int.FloorToInt(pos);
+      if (_decorTilemap.GetTile(posInt)) return;
+
       foreach (Vector2 placed in _placedResources)
       {
         if (Vector2.Distance(pos, placed) < resource.MinSpacing) return;

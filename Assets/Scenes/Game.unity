@@ -717,7 +717,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 554353419}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -725,7 +725,7 @@ Transform:
   - {fileID: 1805142624}
   - {fileID: 367923944}
   - {fileID: 436124517}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1790507294}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &619394800
 GameObject:
@@ -761,7 +761,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.8
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -842,6 +842,7 @@ Transform:
   m_Children:
   - {fileID: 519420032}
   - {fileID: 619394802}
+  - {fileID: 2127437995}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1027941913
@@ -924,61 +925,62 @@ MonoBehaviour:
   _barrierTilemap: {fileID: 367923946}
   _decorTilemap: {fileID: 436124519}
   _seed: 0
-  _width: 50
-  _height: 50
+  _width: 100
+  _height: 100
   _biomeNoiseScale: 0.02
   _biomes:
   - Name: Greenfileds
     NoiseScale: 0.1
-    DefaultTileBase: {fileID: 11400000, guid: f7f2124869c7cb0d687c8094825bc7ec, type: 2}
+    DefaultTileBase: {fileID: 11400000, guid: e181dfd9b02eca4119559701c24587de, type: 2}
     Tiles:
     - Name: Cliff
       Threshold: 0.2
       Type: 1
-      TileBase: {fileID: 11400000, guid: e9fba0126a04246a083392192f0bd6b2, type: 2}
+      TileBase: {fileID: 11400000, guid: 78857be417fd1989ba025d4723c3627e, type: 2}
     DecorDensity: 0.05
     DecorTiles:
-    - Name: Rock_0
-      TileBase: {fileID: 11400000, guid: 4cda6004f947e4544b42eea9d067f82d, type: 2}
-      Weight: 0.2
-      NoiseScale: 0.1
-      Threshold: 0
-    - Name: Rock_1
-      TileBase: {fileID: 11400000, guid: fb26da56a07f2064a80fd7ec64e2c141, type: 2}
-      Weight: 0.2
-      NoiseScale: 0.1
-      Threshold: 0
-    - Name: Bush_0
-      TileBase: {fileID: 11400000, guid: d4acbcb85684fb56c88a519e6a7d8d3c, type: 2}
-      Weight: 0.5
-      NoiseScale: 0.1
-      Threshold: 0
-    - Name: Leaf_0
-      TileBase: {fileID: 11400000, guid: a1e8fe2126b237fe38f53dfbad278a5b, type: 2}
+    - Name: rock_0
+      TileBase: {fileID: 11400000, guid: c1bb2687d3acb9f80b1665f44e287885, type: 2}
+      Weight: 0.05
+      NoiseScale: 0.02
+      Threshold: 0.2
+    - Name: flower_0
+      TileBase: {fileID: 11400000, guid: addf0bb389d1f2e3687e6ebb48dff20c, type: 2}
       Weight: 0.1
       NoiseScale: 0.1
-      Threshold: 0.3
-    - Name: Leaf_1
-      TileBase: {fileID: 11400000, guid: 81ff636a3139b9dd8bb86f783525c3ea, type: 2}
+      Threshold: 0.2
+    - Name: flower_1
+      TileBase: {fileID: 11400000, guid: e2637f7732cd44b1da2ba9f87ee9e538, type: 2}
       Weight: 0.1
       NoiseScale: 0.1
-      Threshold: 0.3
-    - Name: Flower_0
-      TileBase: {fileID: 11400000, guid: 959c66c09b9a7e22e97806e9bf77a2d8, type: 2}
-      Weight: 0.3
+      Threshold: 0.2
+    - Name: flower_2
+      TileBase: {fileID: 11400000, guid: 65dfc4639e96e572ba73641dc1b586c5, type: 2}
+      Weight: 0.1
       NoiseScale: 0.1
-      Threshold: 0.1
-    - Name: Flower_1
-      TileBase: {fileID: 11400000, guid: bf2388f109b3d68219928605b645f1fe, type: 2}
-      Weight: 0.3
+      Threshold: 0.2
+    - Name: flower_3
+      TileBase: {fileID: 11400000, guid: 25ed3a03e08f313b3996ac63e36a81b4, type: 2}
+      Weight: 0.1
       NoiseScale: 0.1
-      Threshold: 0.1
-    - Name: Flower_2
-      TileBase: {fileID: 11400000, guid: a45d65f9481570698b71f327033491db, type: 2}
-      Weight: 0.3
-      NoiseScale: 0.1
-      Threshold: 0.1
-    Resources: []
+      Threshold: 0.2
+    Resources:
+    - Name: Berries_0
+      Prefab: {fileID: 4988112828441277638, guid: b75cab09754625ca5b9111db2a9e95b6, type: 3}
+      Weight: 0.05
+      NoiseScale: 0.3
+      Threshold: 0.8
+      Density: 0.8
+      MinSpacing: 1.5
+      RequiresGround: 1
+    - Name: Iron Ore
+      Prefab: {fileID: 5538912229110678040, guid: 795e4c3f24b61548d96e839f418fe53d, type: 3}
+      Weight: 2
+      NoiseScale: 0
+      Threshold: 0.2
+      Density: 5
+      MinSpacing: 8
+      RequiresGround: 1
 --- !u!1 &1790507293
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,7 +1009,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 554353421}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1805142623
@@ -1161,6 +1164,55 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &2127437994
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2127437995}
+  - component: {fileID: 2127437996}
+  m_Layer: 0
+  m_Name: Global Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2127437995
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127437994}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 624403465}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2127437996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127437994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.Volume
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 3093f8a544bac454eac1d9102549de42, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1169,4 +1221,3 @@ SceneRoots:
   - {fileID: 624403465}
   - {fileID: 1790507294}
   - {fileID: 392979006}
-  - {fileID: 554353421}

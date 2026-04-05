@@ -102,7 +102,7 @@ ScriptedImporter:
     generateIndividualEvents: 1
     generateSpriteAtlas: 1
   importFileNodeState: 1
-  platformSettingsDirtyTick: 639108486444100930
+  platformSettingsDirtyTick: 639109280227565970
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -129,7 +129,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: ores
     originalName: 
-    pivot: {x: 0.5, y: -0.36842105}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -137,9 +137,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 24
-      height: 19
-    spriteID: 3d6fc5fcc655d0692823af823599cdf9
+      width: 32
+      height: 27
+    spriteID: 24d06cdc9dbc285adbd19c7e094ab85e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -152,7 +152,7 @@ ScriptedImporter:
   tileSetImportData:
   - name: Layer 1
     originalName: 
-    pivot: {x: 0.6666667, y: 0.84210527}
+    pivot: {x: 0.5, y: 0.5925926}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -160,9 +160,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 24
-      height: 19
-    spriteID: 50b3b54a54a1ab4cc8caf7a612f39f30
+      width: 32
+      height: 27
+    spriteID: ec241897232dbb710b967d7f433440c6
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -188,11 +188,11 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 4
-        y: 7
-        width: 24
-        height: 19
-      spriteId: 50b3b54a54a1ab4cc8caf7a612f39f30
+        x: 0
+        y: 0
+        width: 32
+        height: 27
+      spriteId: ec241897232dbb710b967d7f433440c6
     linkedCells: []
     tileCells: []
     tileSetIndex: 0
@@ -227,4 +227,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 32, y: 32}
-  previousTextureSize: {x: 32, y: 32}
+  previousTextureSize: {x: 64, y: 64}
